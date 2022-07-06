@@ -28,7 +28,7 @@ public class Sentence{
 
         if(containsTerms){
             return  true;
-        } else {//выделил немножко памяти на 1 boolean чтобы не проверять каждый раз с нуля
+        } else if(!checked_previously){//выделил немножко памяти на 1 boolean чтобы не проверять каждый раз с нуля
             resizeIfNeeded(terms, rawWords.size());
 
             for(int i = 0; i<100&&i<sorted_table.size(); i++){
